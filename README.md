@@ -3,8 +3,8 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
 ![XGBoost](https://img.shields.io/badge/XGBoost-ML-success.svg)
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-orange.svg)
+![SIEM Compatible](https://img.shields.io/badge/SIEM-Compatible-green.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Output: JSON](https://img.shields.io/badge/Output-JSON-blue.svg)
 
 ## Overview
 
