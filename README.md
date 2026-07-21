@@ -90,7 +90,7 @@ National Cybercrime Coordination Centre (NC3)
 # Project Structure
 
 ```
-c2_detector_v3_2/
+c2_detector_v3/
 
 │
 ├── c2_detector.py
