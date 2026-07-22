@@ -1,0 +1,5 @@
+feature,required_by_model,present_in_source,action
+Flow Duration,True,True,used
+Fwd Header Length,True,True,used
+Destination Port,True,True,used
+Flow IAT Min,True,True,used

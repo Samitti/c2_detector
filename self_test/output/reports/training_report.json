@@ -1,0 +1,179 @@
+{
+  "report_metadata": {
+    "generated_at_utc": "2026-07-22T19:05:23.925002+00:00",
+    "tool": "C2 Traffic Detector v1.0.1",
+    "purpose": "Research evaluation of encrypted C2 flow detection"
+  },
+  "data_provenance": {
+    "cicids_benign_file": "self_test/data/cicids2017/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv",
+    "cicids_botnet_file": "self_test/data/cicids2017/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+    "ctu13_file": "self_test/data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+    "benign_labeling": {
+      "source": "self_test/data/cicids2017/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv",
+      "label_method": "mapped from Label",
+      "unknown_rows_excluded": 0,
+      "rows_used": 240
+    },
+    "botnet_labeling": {
+      "source": "self_test/data/cicids2017/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "label_method": "mapped from Label",
+      "unknown_rows_excluded": 0,
+      "rows_used": 120
+    },
+    "feature_count": 4,
+    "feature_names": [
+      "Flow Duration",
+      "Fwd Header Length",
+      "Destination Port",
+      "Flow IAT Min"
+    ],
+    "feature_profile": "all-cleaned",
+    "cleaning": {
+      "non_finite_values_replaced": 0,
+      "missing_or_non_numeric_values_imputed": 0,
+      "invalid_values_by_feature": {},
+      "invalid_values_total": 0,
+      "imputation_method": "training/source median, then zero only when median unavailable",
+      "feature_profile": "all-cleaned",
+      "duplicate_features_removed": [],
+      "constant_columns_detected": 0,
+      "constant_columns_removed": 0,
+      "constant_column_names": [],
+      "quality_rows": []
+    }
+  },
+  "internal_cicids2017_evaluation": {
+    "accuracy": 0.9848484848484849,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.020833333333333332,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 47,
+      "fp": 1,
+      "fn": 0,
+      "tp": 18
+    },
+    "classification_report": {
+      "benign": {
+        "precision": 1.0,
+        "recall": 0.9791666666666666,
+        "f1-score": 0.9894736842105263,
+        "support": 48.0
+      },
+      "c2_malicious": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1-score": 0.972972972972973,
+        "support": 18.0
+      },
+      "accuracy": 0.9848484848484849,
+      "macro avg": {
+        "precision": 0.9736842105263157,
+        "recall": 0.9895833333333333,
+        "f1-score": 0.9812233285917497,
+        "support": 66.0
+      },
+      "weighted avg": {
+        "precision": 0.9856459330143541,
+        "recall": 0.9848484848484849,
+        "f1-score": 0.984973490236648,
+        "support": 66.0
+      }
+    },
+    "support": 66
+  },
+  "external_ctu13_evaluation": {
+    "accuracy": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 50,
+      "fp": 0,
+      "fn": 0,
+      "tp": 50
+    },
+    "classification_report": {
+      "benign": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 50.0
+      },
+      "c2_malicious": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 50.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      }
+    },
+    "support": 100,
+    "labeling": {
+      "source": "self_test/data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+      "label_method": "mapped from Label",
+      "unknown_rows_excluded": 0,
+      "rows_used": 100
+    },
+    "cleaning": {
+      "non_finite_values_replaced": 0,
+      "missing_or_non_numeric_values_imputed": 0,
+      "invalid_values_by_feature": {},
+      "invalid_values_total": 0,
+      "imputation_method": "training/source median, then zero only when median unavailable",
+      "feature_profile": "all-cleaned",
+      "duplicate_features_removed": [],
+      "constant_columns_detected": 0,
+      "constant_columns_removed": 0,
+      "constant_column_names": [],
+      "quality_rows": []
+    },
+    "feature_alignment": {
+      "training_feature_count": 4,
+      "source_feature_count": 4,
+      "matched_feature_count": 4,
+      "coverage_ratio": 1.0,
+      "missing_features_filled_with_zero": [],
+      "extra_features_dropped": [],
+      "features_with_large_distribution_shift": 0,
+      "alignment_report": "self_test/output/validation/feature_alignment_report.csv",
+      "distribution_report": "self_test/output/validation/feature_distribution_report.csv"
+    },
+    "dataset": "self_test/data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+    "probability_distribution_report": "self_test/output/validation/ctu_probability_distribution.csv"
+  },
+  "global_explainability": {
+    "method": "SHAP TreeExplainer",
+    "plot": "self_test/output/shap/shap_summary.png",
+    "top_features": [
+      "Flow Duration",
+      "Fwd Header Length",
+      "Flow IAT Min",
+      "Destination Port"
+    ]
+  },
+  "limitations": [
+    "Research prototype only; not operational certification.",
+    "External FPR cannot be measured when CTU-13 is treated as malicious-only."
+  ],
+  "output_files": {
+    "model": "self_test/output/models/c2_model.json",
+    "training_report": "self_test/output/reports/training_report.json",
+    "feature_alignment_report": "self_test/output/validation/feature_alignment_report.csv",
+    "feature_distribution_report": "self_test/output/validation/feature_distribution_report.csv",
+    "ctu_probability_report": "self_test/output/validation/ctu_probability_distribution.csv",
+    "data_quality_report": "self_test/output/validation/data_quality_report.csv"
+  }
+}

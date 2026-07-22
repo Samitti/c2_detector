@@ -1,0 +1,355 @@
+{
+  "report_metadata": {
+    "generated_at_utc": "2026-07-22T19:05:23.967178+00:00",
+    "tool": "C2 Traffic Detector v1.0.1",
+    "input_file": "self_test/new_flows.csv",
+    "source_pcap": null,
+    "flow_extractor": null,
+    "model_used": "self_test/output/models/c2_model.json"
+  },
+  "summary": {
+    "total_flows_analyzed": 20,
+    "c2_alerts_raised": 10,
+    "alert_rate": 0.5,
+    "decision_threshold": 0.5
+  },
+  "data_quality": {
+    "cleaning": {
+      "non_finite_values_replaced": 0,
+      "missing_or_non_numeric_values_imputed": 0,
+      "invalid_values_by_feature": {},
+      "invalid_values_total": 0,
+      "imputation_method": "training/source median, then zero only when median unavailable",
+      "feature_profile": "all-cleaned",
+      "duplicate_features_removed": [],
+      "constant_columns_detected": 0,
+      "constant_columns_removed": 0,
+      "constant_column_names": [],
+      "quality_rows": []
+    },
+    "feature_alignment": {
+      "training_feature_count": 4,
+      "source_feature_count": 4,
+      "matched_feature_count": 4,
+      "coverage_ratio": 1.0,
+      "missing_features_filled_with_zero": [],
+      "extra_features_dropped": []
+    }
+  },
+  "tls_enrichment": null,
+  "alerts": [
+    {
+      "event_id": "c2-00000010",
+      "source_row": 10,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 72.70134366720224,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 59.821946319049545,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 10.483919993627625,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000011",
+      "source_row": 11,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 94.80267625941138,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 60.6551355809671,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 11.158371005963264,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000012",
+      "source_row": 12,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 106.05677781261964,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 52.34642371371647,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 10.267360957513404,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000013",
+      "source_row": 13,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 112.20634172943882,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 61.87193225853132,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 6.022745701130788,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000014",
+      "source_row": 14,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 129.9258325003873,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 56.35356531813169,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 8.123409268100737,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000015",
+      "source_row": 15,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 126.96439786279517,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 61.44679578478556,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 10.87060031329088,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000016",
+      "source_row": 16,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 123.2764456511536,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 61.54810040954583,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 7.845287640358292,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000017",
+      "source_row": 17,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 92.22237747706104,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 61.11561009203083,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 6.41080108974989,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000018",
+      "source_row": 18,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 105.37814662667498,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 59.99040073411827,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 8.360727886052796,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    },
+    {
+      "event_id": "c2-00000019",
+      "source_row": 19,
+      "event_type": "encrypted_c2_suspected",
+      "severity": "high",
+      "verdict": "C2_MALICIOUS",
+      "confidence": 0.994553,
+      "threshold": 0.5,
+      "network_identifiers": {},
+      "explanation_method": "SHAP TreeExplainer",
+      "top_reasons": [
+        {
+          "feature": "Flow Duration",
+          "value": 118.53971890353294,
+          "shap_contribution": 3.2759103775024414,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Fwd Header Length",
+          "value": 62.38764668633398,
+          "shap_contribution": 1.865990161895752,
+          "effect": "toward C2"
+        },
+        {
+          "feature": "Flow IAT Min",
+          "value": 4.912749594955837,
+          "shap_contribution": 0.039663247764110565,
+          "effect": "toward C2"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "An alert is an investigative lead, not proof of criminal activity."
+  ]
+}

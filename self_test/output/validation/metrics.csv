@@ -1,0 +1,8 @@
+metric,value
+accuracy,0.9848484848484849
+roc_auc,1.0
+false_positive_rate,0.020833333333333332
+false_negative_rate,0.0
+precision_c2,0.9473684210526315
+recall_c2,1.0
+f1_c2,0.972972972972973
