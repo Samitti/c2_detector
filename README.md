@@ -156,6 +156,10 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
+```bash
+pip install cicflowmeter==0.4.0
+```
+
 ---
 
 # Dataset Structure
