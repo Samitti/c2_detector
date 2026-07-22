@@ -68,7 +68,7 @@ National Cybercrime Coordination Centre (NC3)
 
 ---
 
-# Version 3.2 Features
+# Features
 
 - XGBoost encrypted C2 classifier
 - SHAP global explainability
@@ -144,11 +144,6 @@ Linux
 source .venv/bin/activate
 ```
 
-Windows
-
-```bash
-.venv\Scripts\activate
-```
 
 Install dependencies
 
@@ -335,7 +330,7 @@ This evaluates how well the model generalizes to unseen malware traffic.
 
 # Explainable AI
 
-Version 3.2 integrates **SHAP (SHapley Additive exPlanations)**.
+Integrates **SHAP (SHapley Additive exPlanations)**.
 
 For every prediction, SHAP identifies which features contributed most to the classification.
 
@@ -382,7 +377,7 @@ Current limitations include
 
 ---
 
-# Future Work (Version 4.0)
+# Future Work (Version 2.0)
 
 Planned improvements include
 
