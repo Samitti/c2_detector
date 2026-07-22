@@ -173,6 +173,21 @@ data/
 
 ---
 
+
+# Automated Self Tests
+
+Test the tool 
+
+```bash
+python3 c2_detector.py self-test
+```
+I susccess, it should show
+
+```bash
+SELF-TEST PASSED
+```
+
+
 # Training
 
 Train the model
